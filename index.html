@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ale Kolajo Israel — Front-End Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0d1117;--cream:#f4f1ea;--sand:#e6dfc9;--accent:#1a6cf7;--accent2:#0f4abf;
+  --muted:#5a6478;--line:rgba(13,17,23,0.1);
+  --serif:'Playfair Display',Georgia,serif;
+  --mono:'DM Mono',monospace;
+  --sans:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weight:300;overflow-x:hidden}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1.1rem 2.5rem;
+  background:var(--cream);border-bottom:1px solid var(--line);
+}
+.nav-logo{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:13px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.04em;position:relative;transition:color .2s}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav-links a:hover{color:var(--accent)}
+.nav-links a:hover::after{transform:scaleX(1)}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:64px}
+.hero-left{padding:5rem 3rem 5rem 2.5rem;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--line)}
+.hero-tag{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;opacity:0;animation:fadeUp .6s .2s forwards}
+.hero-name{font-family:var(--serif);font-size:clamp(2.8rem,4.5vw,5rem);line-height:1.05;font-weight:700;margin-bottom:.3rem;opacity:0;animation:fadeUp .6s .35s forwards}
+.hero-name em{font-style:italic;font-weight:400;color:var(--accent)}
+.hero-role{font-family:var(--serif);font-size:clamp(1.2rem,2vw,1.8rem);font-style:italic;color:var(--muted);margin-bottom:2rem;opacity:0;animation:fadeUp .6s .5s forwards}
+.hero-bio{font-size:14.5px;line-height:1.85;color:var(--muted);max-width:40ch;margin-bottom:2.5rem;opacity:0;animation:fadeUp .6s .65s forwards}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:fadeUp .6s .8s forwards}
+.btn{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.8rem 1.75rem;cursor:pointer;text-decoration:none;transition:all .2s;display:inline-block}
+.btn-primary{background:var(--ink);color:var(--cream);border:1px solid var(--ink)}
+.btn-primary:hover{background:var(--accent);border-color:var(--accent)}
+.btn-outline{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn-outline:hover{background:var(--ink);color:var(--cream)}
+
+.hero-right{position:relative;display:flex;align-items:center;justify-content:center;padding:5rem 2.5rem;background:var(--sand)}
+.hero-card{
+  width:300px;background:var(--cream);border:1px solid var(--line);padding:2rem;
+  position:relative;opacity:0;animation:fadeIn .8s .6s forwards;
+}
+.hero-card::before{content:'';position:absolute;top:-12px;left:-12px;right:12px;bottom:12px;border:1px solid rgba(13,17,23,.06)}
+.avatar{
+  width:72px;height:72px;border-radius:50%;background:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:1.5rem;color:var(--cream);font-weight:700;
+  margin-bottom:1.25rem;
+}
+.hero-card h3{font-family:var(--serif);font-size:1.15rem;font-weight:700;margin-bottom:.25rem}
+.hero-card p{font-size:12px;color:var(--muted);margin-bottom:1.25rem}
+.card-divider{height:1px;background:var(--line);margin-bottom:1.25rem}
+.card-stat{display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem}
+.card-stat-label{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.card-stat-val{font-size:13px;font-weight:500}
+.status-row{display:flex;align-items:center;gap:.5rem;margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--line)}
+.dot{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+.status-text{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+section{border-top:1px solid var(--line)}
+.section-inner{padding:5rem 2.5rem}
+.section-label{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:3rem;display:flex;align-items:center;gap:1rem}
+.section-label::after{content:'';flex:1;height:1px;background:var(--line)}
+.section-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;margin-bottom:1rem;line-height:1.15}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:3rem;border:1px solid var(--line)}
+.skill-card{padding:1.75rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .2s}
+.skill-card:hover{background:var(--sand)}
+.skill-icon{font-size:1.3rem;margin-bottom:.75rem}
+.skill-name{font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.4rem}
+.skill-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.5rem}
+.stag{font-family:var(--mono);font-size:10px;letter-spacing:.06em;padding:2px 8px;border:1px solid var(--line);color:var(--muted)}
+
+/* PROJECTS */
+.projects-list{margin-top:3rem}
+.project-item{display:grid;grid-template-columns:60px 1fr auto;align-items:start;gap:1.75rem;padding:2rem 0;border-bottom:1px solid var(--line);cursor:pointer;transition:padding-left .2s}
+.project-item:hover{padding-left:.75rem}
+.project-num{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.1em;padding-top:4px}
+.project-title{font-family:var(--serif);font-size:1.3rem;font-weight:700;margin-bottom:.35rem}
+.project-desc{font-size:13.5px;color:var(--muted);line-height:1.65;max-width:55ch;margin-bottom:.9rem}
+.ptags{display:flex;gap:.4rem;flex-wrap:wrap}
+.ptag{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:2px 9px;border:1px solid var(--line);color:var(--muted)}
+.project-arrow{font-size:1.1rem;color:var(--muted);padding-top:4px;transition:color .2s,transform .2s}
+.project-item:hover .project-arrow{color:var(--accent);transform:translate(4px,-4px)}
+
+/* EXPERIENCE */
+.exp-list{margin-top:3rem}
+.exp-item{display:grid;grid-template-columns:160px 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--line)}
+.exp-date{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.08em;padding-top:4px}
+.exp-role{font-family:var(--serif);font-size:1.1rem;font-weight:700;margin-bottom:.2rem}
+.exp-org{font-size:13px;color:var(--accent);margin-bottom:.75rem;font-weight:400}
+.exp-bullets{list-style:none;padding:0}
+.exp-bullets li{font-size:13.5px;color:var(--muted);line-height:1.65;padding-left:1rem;position:relative;margin-bottom:.4rem}
+.exp-bullets li::before{content:'—';position:absolute;left:0;color:var(--line)}
+
+/* CERTS */
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:3rem}
+.cert-card{padding:1.5rem;border:1px solid var(--line);transition:border-color .2s,background .2s}
+.cert-card:hover{border-color:var(--accent);background:var(--sand)}
+.cert-name{font-weight:500;font-size:14px;margin-bottom:.35rem}
+.cert-issuer{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
+.contact-intro{font-family:var(--serif);font-size:1.5rem;font-style:italic;line-height:1.6;color:var(--muted)}
+.contact-links{display:flex;flex-direction:column;gap:.75rem}
+.contact-link{display:flex;align-items:center;gap:1rem;font-size:13.5px;color:var(--ink);text-decoration:none;padding:1.1rem 1.25rem;border:1px solid var(--line);transition:all .2s}
+.contact-link:hover{border-color:var(--accent);color:var(--accent);background:var(--sand)}
+.clabel{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:auto}
+
+footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">AKI — Portfolio</span>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="about">
+  <div class="hero-left">
+    <p class="hero-tag">&#9679; Open to opportunities</p>
+    <h1 class="hero-name">Ale Kolajo<br><em>Israel</em></h1>
+    <p class="hero-role">Front-End Web Developer</p>
+    <p class="hero-bio">A motivated, detail-oriented developer with a strong foundation in Computer Engineering and hands-on training from the ALX Front-End Web Development Program. I build responsive, user-centred web applications with a focus on clean code, performance, and intuitive UX.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+      <a href="https://github.com/MKOale" class="btn btn-outline">GitHub ↗</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-card">
+      <div class="avatar">AKI</div>
+      <h3>Ale Kolajo Israel</h3>
+      <p>Front-End Developer · Ado-Ekiti, Nigeria</p>
+      <div class="card-divider"></div>
+      <div class="card-stat">
+        <span class="card-stat-label">Education</span>
+        <span class="card-stat-val">B.Eng, EKSU</span>
+      </div>
+      <div class="card-stat">
+        <span class="card-stat-label">Certified</span>
+        <span class="card-stat-val">ALX Africa 2025</span>
+      </div>
+      <div class="card-stat">
+        <span class="card-stat-label">GitHub</span>
+        <span class="card-stat-val">MKOale</span>
+      </div>
+      <div class="status-row">
+        <span class="dot"></span>
+        <span class="status-text">Available for hire</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner reveal">
+    <div class="section-label">02 / Technical Skills</div>
+    <h2 class="section-title">Tools &amp; technologies<br>I work with</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">&#9670;</div>
+        <p class="skill-name">Core Languages</p>
+        <div class="skill-tags">
+          <span class="stag">HTML5</span><span class="stag">CSS3</span><span class="stag">JavaScript ES6+</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">&#9671;</div>
+        <p class="skill-name">Frameworks &amp; Libraries</p>
+        <div class="skill-tags">
+          <span class="stag">React</span><span class="stag">TailwindCSS</span><span class="stag">Bootstrap</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">&#9673;</div>
+        <p class="skill-name">Dev Tools</p>
+        <div class="skill-tags">
+          <span class="stag">Git</span><span class="stag">GitHub</span><span class="stag">VS Code</span><span class="stag">Netlify</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">&#9648;</div>
+        <p class="skill-name">Concepts</p>
+        <div class="skill-tags">
+          <span class="stag">Responsive Design</span><span class="stag">UI/UX</span><span class="stag">API Integration</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner reveal">
+    <div class="section-label">03 / Projects</div>
+    <h2 class="section-title">Things I've<br>built</h2>
+    <div class="projects-list">
+
+      <div class="project-item" onclick="window.open('https://github.com/MKOale','_blank')">
+        <span class="project-num">001</span>
+        <div>
+          <h3 class="project-title">Movie Database App</h3>
+          <p class="project-desc">A responsive movie search platform powered by a third-party API. Features dynamic content rendering and a user-friendly search experience with clean, intuitive UI.</p>
+          <div class="ptags"><span class="ptag">JavaScript</span><span class="ptag">API</span><span class="ptag">Responsive</span></div>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+
+      <div class="project-item" onclick="window.open('https://github.com/MKOale','_blank')">
+        <span class="project-num">002</span>
+        <div>
+          <h3 class="project-title">Interactive Quiz Platform</h3>
+          <p class="project-desc">A quiz application with real-time scoring logic and instant feedback. Designed with usability at the forefront — clean layout, smooth interactions, and encouraging UX.</p>
+          <div class="ptags"><span class="ptag">JavaScript</span><span class="ptag">UI/UX</span><span class="ptag">DOM</span></div>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+
+      <div class="project-item" onclick="window.open('https://github.com/MKOale','_blank')">
+        <span class="project-num">003</span>
+        <div>
+          <h3 class="project-title">To-Do List App</h3>
+          <p class="project-desc">A task management application with full CRUD operations and persistent data via local storage. Reliable, minimal, and built to stay out of your way.</p>
+          <div class="ptags"><span class="ptag">JavaScript</span><span class="ptag">LocalStorage</span><span class="ptag">CRUD</span></div>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+
+    </div>
+    <p style="margin-top:2rem;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.08em;">More on GitHub → <a href="https://github.com/MKOale" style="color:var(--accent);text-decoration:none;">github.com/MKOale</a></p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner reveal">
+    <div class="section-label">04 / Experience &amp; Leadership</div>
+    <h2 class="section-title">Where I've<br>contributed</h2>
+    <div class="exp-list">
+
+      <div class="exp-item">
+        <span class="exp-date">May – Oct 2023</span>
+        <div>
+          <p class="exp-role">Student Industrial Trainee</p>
+          <p class="exp-org">Bureau of Information &amp; Technology, Ekiti State</p>
+          <ul class="exp-bullets">
+            <li>Computer system setup, configuration, and troubleshooting</li>
+            <li>Hardware maintenance and peripheral device support</li>
+            <li>LAN setup and basic networking concepts</li>
+            <li>Routine system maintenance and IT support tasks</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <span class="exp-date">2023 – 2024</span>
+        <div>
+          <p class="exp-role">Zonal Youth Leader</p>
+          <p class="exp-org">RCCG Transfiguration Zonal HQ, Iworoko Ekiti</p>
+          <ul class="exp-bullets">
+            <li>Anchored special events and coordinated zonal executives</li>
+            <li>Led all Parish Youth Leaders to foster inter-church progressiveness</li>
+            <li>Organised the first-ever Zonal Youth Convention</li>
+            <li>Mentored teenagers and facilitated faith-based discussions</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTS -->
+<section>
+  <div class="section-inner reveal">
+    <div class="section-label">05 / Certifications</div>
+    <h2 class="section-title">Credentials &amp;<br>recognition</h2>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <p class="cert-name">Front-End Web Development</p>
+        <p class="cert-issuer">ALX Africa · 2025</p>
+      </div>
+      <div class="cert-card">
+        <p class="cert-name">Professional Foundations Certificate</p>
+        <p class="cert-issuer">ALX Africa · 2025</p>
+      </div>
+      <div class="cert-card">
+        <p class="cert-name">GIZ Programme Certificate</p>
+        <p class="cert-issuer">Deutsche Gesellschaft für Internationale Zusammenarbeit · 2022</p>
+      </div>
+      <div class="cert-card">
+        <p class="cert-name">Zonal Youth Pastor Tenure Certificate</p>
+        <p class="cert-issuer">RCCG Transfiguration Zone · 2024</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner reveal">
+    <div class="section-label">06 / Contact</div>
+    <h2 class="section-title">Let's build<br>something great</h2>
+    <div class="contact-grid">
+      <p class="contact-intro">"Passionate about building responsive, user-centred applications — always learning, always improving."</p>
+      <div class="contact-links">
+        <a href="mailto:alekolajo@gmail.com" class="contact-link">
+          <span class="clabel">Email</span>alekolajo@gmail.com ↗
+        </a>
+        <a href="tel:+2348060151823" class="contact-link">
+          <span class="clabel">Phone</span>+234 806 015 1823 ↗
+        </a>
+        <a href="https://github.com/MKOale" class="contact-link">
+          <span class="clabel">GitHub</span>github.com/MKOale ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Ale Kolajo Israel</span>
+  <span>Front-End Developer · Ado-Ekiti, Nigeria</span>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:0.08});
+reveals.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
