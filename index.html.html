@@ -16,9 +16,7 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weight:300;overflow-x:hidden}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2.5rem;background:var(--cream);border-bottom:1px solid var(--line);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2.5rem;background:var(--cream);border-bottom:1px solid var(--line)}
 .nav-logo{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{font-size:13px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.04em;position:relative;transition:color .2s}
@@ -27,8 +25,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .nav-links a:hover::after{transform:scaleX(1)}
 .nav-hire{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.1rem;border:1px solid var(--ink);color:var(--ink);text-decoration:none;transition:all .2s}
 .nav-hire:hover{background:var(--accent);border-color:var(--accent);color:#fff}
-
-/* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:1.1fr 0.9fr;padding-top:64px}
 .hero-left{padding:5rem 3rem 5rem 2.5rem;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--line)}
 .hero-tag{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;opacity:0;animation:fadeUp .6s .2s forwards;display:flex;align-items:center;gap:.6rem}
@@ -46,32 +42,24 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .hero-stats{display:flex;gap:2.5rem;opacity:0;animation:fadeUp .6s .95s forwards}
 .hero-stat-num{font-family:var(--serif);font-size:1.8rem;font-weight:700;line-height:1}
 .hero-stat-label{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
-
-/* HERO RIGHT — PHOTO */
 .hero-right{position:relative;display:flex;align-items:center;justify-content:center;padding:5rem 2.5rem;background:var(--sand);overflow:hidden}
 .hero-right::before{content:'AKI';position:absolute;font-family:var(--serif);font-size:18rem;font-weight:700;color:rgba(13,17,23,.04);line-height:1;pointer-events:none;user-select:none}
 .photo-frame{position:relative;opacity:0;animation:fadeIn .8s .6s forwards}
-.photo-frame img{width:280px;height:340px;object-fit:cover;object-position:top;display:block;filter:grayscale(8%)}
+.photo-frame img{width:290px;height:350px;object-fit:cover;object-position:top center;display:block}
 .photo-frame::before{content:'';position:absolute;top:-14px;left:-14px;right:14px;bottom:14px;border:1px solid rgba(13,17,23,.15);z-index:0}
 .photo-frame::after{content:'';position:absolute;bottom:-14px;right:-14px;width:60%;height:60%;border:1px solid var(--accent);opacity:.3}
-.photo-badge{position:absolute;bottom:-1.5rem;left:-1.5rem;background:var(--ink);color:var(--cream);padding:.9rem 1.25rem;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;z-index:2}
-
-/* SECTIONS */
+.photo-badge{position:absolute;bottom:-1.5rem;left:-1.5rem;background:var(--ink);color:var(--cream);padding:.9rem 1.25rem;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;z-index:2;line-height:1.6}
 section{border-top:1px solid var(--line)}
 .section-inner{padding:5rem 2.5rem}
 .section-label{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:3rem;display:flex;align-items:center;gap:1rem}
 .section-label::after{content:'';flex:1;height:1px;background:var(--line)}
 .section-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;margin-bottom:.5rem;line-height:1.15}
-.section-sub{font-size:14px;color:var(--muted);margin-bottom:0;max-width:50ch;line-height:1.7}
-
-/* ABOUT STRIP */
+.section-sub{font-size:14px;color:var(--muted);max-width:50ch;line-height:1.7;margin-top:.5rem}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
 .about-text{font-size:15px;line-height:1.85;color:var(--muted)}
 .strengths{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
 .strength{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border:1px solid var(--line);color:var(--muted);transition:all .2s}
 .strength:hover{border-color:var(--accent);color:var(--accent)}
-
-/* SKILLS */
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:3rem;border:1px solid var(--line)}
 .skill-card{padding:1.75rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .2s}
 .skill-card:hover{background:var(--sand)}
@@ -80,10 +68,8 @@ section{border-top:1px solid var(--line)}
 .skill-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.5rem}
 .stag{font-family:var(--mono);font-size:10px;letter-spacing:.06em;padding:3px 9px;border:1px solid var(--line);color:var(--muted);transition:all .2s}
 .stag:hover{border-color:var(--accent);color:var(--accent)}
-
-/* PROJECTS */
 .projects-list{margin-top:3rem}
-.project-item{display:grid;grid-template-columns:60px 1fr auto;align-items:start;gap:1.75rem;padding:2rem 0;border-bottom:1px solid var(--line);cursor:pointer;transition:padding-left .25s,background .2s;border-radius:2px}
+.project-item{display:grid;grid-template-columns:60px 1fr auto;align-items:start;gap:1.75rem;padding:2rem 0;border-bottom:1px solid var(--line);cursor:pointer;transition:padding-left .25s}
 .project-item:hover{padding-left:.75rem}
 .project-num{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.1em;padding-top:5px}
 .project-title{font-family:var(--serif);font-size:1.3rem;font-weight:700;margin-bottom:.35rem;transition:color .2s}
@@ -93,8 +79,6 @@ section{border-top:1px solid var(--line)}
 .ptag{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:2px 9px;border:1px solid var(--line);color:var(--muted)}
 .project-arrow{font-size:1.1rem;color:var(--muted);padding-top:5px;transition:color .2s,transform .2s}
 .project-item:hover .project-arrow{color:var(--accent);transform:translate(4px,-4px)}
-
-/* EXPERIENCE */
 .exp-list{margin-top:3rem}
 .exp-item{display:grid;grid-template-columns:160px 1fr;gap:2rem;padding:2.5rem 0;border-bottom:1px solid var(--line);transition:padding-left .2s}
 .exp-item:hover{padding-left:.5rem}
@@ -103,17 +87,13 @@ section{border-top:1px solid var(--line)}
 .exp-org{font-size:13px;color:var(--accent);margin-bottom:.85rem;font-weight:400}
 .exp-bullets{list-style:none;padding:0}
 .exp-bullets li{font-size:13.5px;color:var(--muted);line-height:1.65;padding-left:1.2rem;position:relative;margin-bottom:.45rem}
-.exp-bullets li::before{content:'—';position:absolute;left:0;color:rgba(13,17,23,.2)}
-
-/* CERTS */
+.exp-bullets li::before{content:'--';position:absolute;left:0;color:rgba(13,17,23,.2)}
 .certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:3rem}
-.cert-card{padding:1.5rem;border:1px solid var(--line);transition:border-color .2s,background .2s,transform .2s;cursor:default}
+.cert-card{padding:1.5rem;border:1px solid var(--line);transition:border-color .2s,background .2s,transform .2s}
 .cert-card:hover{border-color:var(--accent);background:var(--sand);transform:translateY(-3px)}
 .cert-icon{font-size:1.2rem;margin-bottom:.75rem}
-.cert-name{font-weight:500;font-size:14px;margin-bottom:.4rem;font-family:var(--serif)}
+.cert-name{font-family:var(--serif);font-weight:700;font-size:14px;margin-bottom:.4rem}
 .cert-issuer{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-
-/* CONTACT */
 .contact-wrap{margin-top:3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem}
 .contact-intro{font-family:var(--serif);font-size:1.4rem;font-style:italic;line-height:1.7;color:var(--muted);margin-bottom:2rem}
 .contact-note{font-size:13.5px;color:var(--muted);line-height:1.7}
@@ -121,25 +101,18 @@ section{border-top:1px solid var(--line)}
 .contact-link{display:flex;align-items:center;gap:1rem;font-size:13.5px;color:var(--ink);text-decoration:none;padding:1.1rem 1.25rem;border:1px solid var(--line);transition:all .25s}
 .contact-link:hover{border-color:var(--accent);color:var(--accent);background:var(--sand);padding-left:1.75rem}
 .clabel{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:auto}
-
-/* FOOTER */
 footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em}
 .footer-links{display:flex;gap:1.5rem}
 .footer-links a{color:var(--muted);text-decoration:none;transition:color .2s}
 .footer-links a:hover{color:var(--accent)}
-
-/* SCROLL TO TOP */
 .scroll-top{position:fixed;bottom:2rem;right:2rem;width:40px;height:40px;background:var(--ink);color:var(--cream);border:none;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s,background .2s;z-index:50}
 .scroll-top.show{opacity:1}
 .scroll-top:hover{background:var(--accent)}
-
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
-
-/* MOBILE */
 @media(max-width:768px){
   nav{padding:1rem 1.25rem}
   .nav-links{gap:1rem}
@@ -170,7 +143,6 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
   <a href="mailto:alekolajo@gmail.com" class="nav-hire">Hire Me</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="about">
   <div class="hero-left">
     <p class="hero-tag">Open to opportunities</p>
@@ -182,29 +154,19 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
       <a href="https://github.com/MKOale" target="_blank" class="btn btn-outline">GitHub ↗</a>
     </div>
     <div class="hero-stats">
-      <div>
-        <p class="hero-stat-num">3+</p>
-        <p class="hero-stat-label">Projects Built</p>
-      </div>
-      <div>
-        <p class="hero-stat-num">2</p>
-        <p class="hero-stat-label">ALX Certificates</p>
-      </div>
-      <div>
-        <p class="hero-stat-num">2026</p>
-        <p class="hero-stat-label">B.Eng Graduate</p>
-      </div>
+      <div><p class="hero-stat-num">3+</p><p class="hero-stat-label">Projects Built</p></div>
+      <div><p class="hero-stat-num">2</p><p class="hero-stat-label">ALX Certificates</p></div>
+      <div><p class="hero-stat-num">2026</p><p class="hero-stat-label">B.Eng Graduate</p></div>
     </div>
   </div>
   <div class="hero-right">
     <div class="photo-frame">
-      <img src="data:image/png;base64,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" alt="Ale Kolajo Israel">
+      <img src="ale_photo.jpg" alt="Ale Kolajo Israel">
       <div class="photo-badge">Ale Kolajo Israel<br>Front-End Developer</div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section>
   <div class="section-inner reveal">
     <div class="section-label">01 / About Me</div>
@@ -217,14 +179,10 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
       <div>
         <p class="about-text" style="margin-bottom:1rem">Personal strengths I bring to every project:</p>
         <div class="strengths">
-          <span class="strength">Adaptability</span>
-          <span class="strength">Leadership</span>
-          <span class="strength">Creativity</span>
-          <span class="strength">Problem Solving</span>
-          <span class="strength">Teamwork</span>
-          <span class="strength">Detail Oriented</span>
-          <span class="strength">Communication</span>
-          <span class="strength">Self-Motivated</span>
+          <span class="strength">Adaptability</span><span class="strength">Leadership</span>
+          <span class="strength">Creativity</span><span class="strength">Problem Solving</span>
+          <span class="strength">Teamwork</span><span class="strength">Detail Oriented</span>
+          <span class="strength">Communication</span><span class="strength">Self-Motivated</span>
           <span class="strength">Time Management</span>
         </div>
       </div>
@@ -232,7 +190,6 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="section-inner reveal">
     <div class="section-label">02 / Technical Skills</div>
@@ -241,36 +198,27 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
       <div class="skill-card">
         <div class="skill-icon">&#9670;</div>
         <p class="skill-name">Core Languages</p>
-        <div class="skill-tags">
-          <span class="stag">HTML5</span><span class="stag">CSS3</span><span class="stag">JavaScript ES6+</span>
-        </div>
+        <div class="skill-tags"><span class="stag">HTML5</span><span class="stag">CSS3</span><span class="stag">JavaScript ES6+</span></div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">&#9671;</div>
         <p class="skill-name">Frameworks &amp; Libraries</p>
-        <div class="skill-tags">
-          <span class="stag">React</span><span class="stag">TailwindCSS</span><span class="stag">Bootstrap</span>
-        </div>
+        <div class="skill-tags"><span class="stag">React</span><span class="stag">TailwindCSS</span><span class="stag">Bootstrap</span></div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">&#9673;</div>
         <p class="skill-name">Dev Tools</p>
-        <div class="skill-tags">
-          <span class="stag">Git</span><span class="stag">GitHub</span><span class="stag">VS Code</span><span class="stag">Netlify</span><span class="stag">Chrome DevTools</span>
-        </div>
+        <div class="skill-tags"><span class="stag">Git</span><span class="stag">GitHub</span><span class="stag">VS Code</span><span class="stag">Netlify</span><span class="stag">Chrome DevTools</span></div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">&#9648;</div>
         <p class="skill-name">Concepts</p>
-        <div class="skill-tags">
-          <span class="stag">Responsive Design</span><span class="stag">UI/UX</span><span class="stag">API Integration</span><span class="stag">CRUD</span>
-        </div>
+        <div class="skill-tags"><span class="stag">Responsive Design</span><span class="stag">UI/UX</span><span class="stag">API Integration</span><span class="stag">CRUD</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="section-inner reveal">
     <div class="section-label">03 / Projects</div>
@@ -284,7 +232,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
           <p class="project-desc">A responsive movie search platform powered by a third-party API. Features dynamic content rendering and a user-friendly search experience with clean, intuitive UI.</p>
           <div class="ptags"><span class="ptag">JavaScript</span><span class="ptag">REST API</span><span class="ptag">Responsive</span><span class="ptag">CSS3</span></div>
         </div>
-        <span class="project-arrow">↗</span>
+        <span class="project-arrow">&#8599;</span>
       </div>
       <div class="project-item" onclick="window.open('https://github.com/MKOale','_blank')">
         <span class="project-num">002</span>
@@ -293,7 +241,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
           <p class="project-desc">A quiz application with real-time scoring logic and instant feedback. Designed with usability at the forefront — clean layout, smooth interactions, and encouraging UX.</p>
           <div class="ptags"><span class="ptag">JavaScript</span><span class="ptag">DOM</span><span class="ptag">UI/UX</span><span class="ptag">CSS3</span></div>
         </div>
-        <span class="project-arrow">↗</span>
+        <span class="project-arrow">&#8599;</span>
       </div>
       <div class="project-item" onclick="window.open('https://github.com/MKOale','_blank')">
         <span class="project-num">003</span>
@@ -302,21 +250,20 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
           <p class="project-desc">A task management application with full CRUD operations and persistent data via local storage. Reliable, minimal, and built to stay out of your way.</p>
           <div class="ptags"><span class="ptag">JavaScript</span><span class="ptag">LocalStorage</span><span class="ptag">CRUD</span><span class="ptag">HTML5</span></div>
         </div>
-        <span class="project-arrow">↗</span>
+        <span class="project-arrow">&#8599;</span>
       </div>
     </div>
-    <p style="margin-top:2rem;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.08em">More projects on → <a href="https://github.com/MKOale" target="_blank" style="color:var(--accent);text-decoration:none">github.com/MKOale</a></p>
+    <p style="margin-top:2rem;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.08em">More on GitHub &#8594; <a href="https://github.com/MKOale" target="_blank" style="color:var(--accent);text-decoration:none">github.com/MKOale</a></p>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-inner reveal">
     <div class="section-label">04 / Experience &amp; Leadership</div>
     <h2 class="section-title">Where I've contributed</h2>
     <div class="exp-list">
       <div class="exp-item">
-        <span class="exp-date">May – Oct 2023<br>Industrial Training</span>
+        <span class="exp-date">May - Oct 2023<br>Industrial Training</span>
         <div>
           <p class="exp-role">Student Industrial Trainee</p>
           <p class="exp-org">Bureau of Information &amp; Technology, Ekiti State</p>
@@ -329,7 +276,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
         </div>
       </div>
       <div class="exp-item">
-        <span class="exp-date">2023 – 2024<br>Volunteer Leadership</span>
+        <span class="exp-date">2023 - 2024<br>Volunteer Leadership</span>
         <div>
           <p class="exp-role">Zonal Youth Leader</p>
           <p class="exp-org">RCCG Transfiguration Zonal HQ, Iworoko Ekiti</p>
@@ -345,7 +292,6 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
   </div>
 </section>
 
-<!-- CERTS -->
 <section>
   <div class="section-inner reveal">
     <div class="section-label">05 / Certifications</div>
@@ -364,7 +310,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
       <div class="cert-card">
         <div class="cert-icon">&#9670;</div>
         <p class="cert-name">GIZ Programme Certificate</p>
-        <p class="cert-issuer">Deutsche Gesellschaft für Internationale Zusammenarbeit · 2022</p>
+        <p class="cert-issuer">Deutsche GIZ · 2022</p>
       </div>
       <div class="cert-card">
         <div class="cert-icon">&#9670;</div>
@@ -375,7 +321,6 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-inner reveal">
     <div class="section-label">06 / Contact</div>
@@ -383,44 +328,36 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
     <div class="contact-wrap">
       <div>
         <p class="contact-intro">"Passionate about building responsive, user-centred applications — always learning, always improving."</p>
-        <p class="contact-note">I'm currently open to front-end developer roles, freelance projects, and collaborations. Feel free to reach out via any channel below — I typically respond within 24 hours.</p>
+        <p class="contact-note">I'm currently open to front-end developer roles, freelance projects, and collaborations. Feel free to reach out — I typically respond within 24 hours.</p>
       </div>
       <div class="contact-links">
-        <a href="mailto:alekolajo@gmail.com" class="contact-link">
-          <span class="clabel">Email</span>alekolajo@gmail.com ↗
-        </a>
-        <a href="tel:+2348060151823" class="contact-link">
-          <span class="clabel">Phone</span>+234 806 015 1823 ↗
-        </a>
-        <a href="https://github.com/MKOale" target="_blank" class="contact-link">
-          <span class="clabel">GitHub</span>github.com/MKOale ↗
-        </a>
+        <a href="mailto:alekolajo@gmail.com" class="contact-link"><span class="clabel">Email</span>alekolajo@gmail.com &#8599;</a>
+        <a href="tel:+2348060151823" class="contact-link"><span class="clabel">Phone</span>+234 806 015 1823 &#8599;</a>
+        <a href="https://github.com/MKOale" target="_blank" class="contact-link"><span class="clabel">GitHub</span>github.com/MKOale &#8599;</a>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <span>© 2026 Ale Kolajo Israel</span>
+  <span>&#169; 2026 Ale Kolajo Israel</span>
   <div class="footer-links">
     <a href="https://github.com/MKOale" target="_blank">GitHub</a>
     <a href="mailto:alekolajo@gmail.com">Email</a>
-    <a href="#about">Back to top ↑</a>
+    <a href="#about">Back to top &#8593;</a>
   </div>
 </footer>
 
-<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">&#8593;</button>
 
 <script>
 const reveals = document.querySelectorAll('.reveal');
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-},{threshold:0.08});
+}, {threshold: 0.08});
 reveals.forEach(el => obs.observe(el));
-
-const scrollBtn = document.getElementById('scrollTop');
 window.addEventListener('scroll', () => {
-  scrollBtn.classList.toggle('show', window.scrollY > 400);
+  document.getElementById('scrollTop').classList.toggle('show', window.scrollY > 400);
 });
 </script>
 </body>
