@@ -155,9 +155,9 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
   /* Nav - scrollable on mobile */
   nav{padding:.9rem 1rem;gap:.5rem}
   .nav-logo{font-size:10px;white-space:nowrap;flex-shrink:0}
-  .nav-links{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:1.25rem;flex-shrink:1;min-width:0}
+  .nav-links{overflow-x:scroll;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:1.25rem;flex-shrink:1;min-width:0;scroll-snap-type:none;overscroll-behavior-x:auto}
   .nav-links::-webkit-scrollbar{display:none}
-  .nav-links a{font-size:12px;white-space:nowrap}
+  .nav-links a{font-size:12px;white-space:nowrap;scroll-snap-align:none}
   .nav-hire{display:none}
   .nav-right{gap:.5rem;flex-shrink:0}
 
@@ -288,7 +288,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
     <h2 class="section-title">Things I've built</h2>
     <p class="section-sub">A selection of projects that showcase my skills. Click any to view on GitHub.</p>
     <div class="projects-list">
-      <div class="project-item" onclick="window.open('https://github.com/MKOale','_blank')">
+      <div class="project-item" onclick="window.open('https://github.com/MKOale/movie-database-app','_blank')">
         <span class="project-num">001</span>
         <div>
           <h3 class="project-title">Movie Database App</h3>
@@ -297,7 +297,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
         </div>
         <span class="project-arrow">&#8599;</span>
       </div>
-      <div class="project-item" onclick="window.open('https://github.com/MKOale','_blank')">
+      <div class="project-item" onclick="window.open('https://github.com/MKOale/ALX_Simple_Quiz','_blank')">
         <span class="project-num">002</span>
         <div>
           <h3 class="project-title">Interactive Quiz Platform</h3>
@@ -306,7 +306,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
         </div>
         <span class="project-arrow">&#8599;</span>
       </div>
-      <div class="project-item" onclick="window.open('https://github.com/MKOale','_blank')">
+      <div class="project-item" onclick="window.open('https://github.com/MKOale/dynamic-to-do-list-js','_blank')">
         <span class="project-num">003</span>
         <div>
           <h3 class="project-title">To-Do List App</h3>
