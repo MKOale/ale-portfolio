@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ale Kolajo Israel — Front-End Developer</title>
-<meta name="description" content="Ale Kolajo Israel — Front-End Web Developer based in Nigeria. I build responsive, user-centred web applications using HTML, CSS, JavaScript and React.">
-<meta name="keywords" content="Ale Kolajo Israel, Front-End Developer, Web Developer, Nigeria, React, JavaScript, HTML, CSS, ALX">
-<meta name="author" content="Ale Kolajo Israel">
-<meta property="og:title" content="Ale Kolajo Israel — Front-End Developer">
-<meta property="og:description" content="Front-End Web Developer building responsive, user-centred web apps. ALX Certified. B.Eng Computer Engineering.">
+<title>Ale Kolajo Israel — Front-End Developer | MKO Global Business Estate</title>
+<meta name="description" content="Ale Kolajo Israel — Front-End Web Developer. MKO Global Business Estate. Web Solutions & Digital Services based in Nigeria.">
+<meta name="keywords" content="Ale Kolajo Israel, MKO Global Business Estate, Front-End Developer, Web Developer, Nigeria, React, JavaScript">
+<meta name="author" content="Ale Kolajo Israel — MKO Global Business Estate">
+<meta property="og:title" content="Ale Kolajo Israel — Front-End Developer | MKO Global Business Estate">
+<meta property="og:description" content="Front-End Web Developer. ALX Certified. B.Eng Computer Engineering. Web Solutions & Digital Services.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230d1117'/><text y='.9em' font-size='60' x='50%' dominant-baseline='middle' text-anchor='middle' fill='%231a6cf7' font-family='Georgia,serif' font-weight='bold'>A</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230d1117'/><text y='.85em' font-size='42' x='50%' dominant-baseline='middle' text-anchor='middle' fill='%231a6cf7' font-family='Georgia,serif' font-weight='bold'>MK</text><text y='1em' font-size='28' x='50%' dominant-baseline='hanging' text-anchor='middle' fill='%23f0b429' font-family='Georgia,serif' font-weight='bold'>O</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -20,29 +20,29 @@ html{scroll-behavior:smooth}
 body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;transition:background .3s,color .3s}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2.5rem;background:var(--cream);border-bottom:1px solid var(--line);transition:background .3s,border-color .3s;gap:1rem}
-.nav-logo{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;flex-shrink:0;white-space:nowrap}
-.nav-right{display:flex;align-items:center;gap:.75rem;flex-shrink:0}
-.nav-hire{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.1rem;border:1px solid var(--ink);color:var(--ink);text-decoration:none;transition:all .2s;white-space:nowrap}
-.nav-hire:hover{background:var(--accent);border-color:var(--accent);color:#fff}
-.theme-toggle{background:none;border:1px solid var(--line);cursor:pointer;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all .2s;color:var(--ink);flex-shrink:0}
-.theme-toggle:hover{border-color:var(--accent);color:var(--accent)}
-
-/* DESKTOP NAV LINKS */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1rem 2.5rem;background:var(--cream);border-bottom:1px solid var(--line);transition:background .3s,border-color .3s;gap:1rem}
+.nav-logo-wrap{display:flex;align-items:center;gap:.6rem;flex-shrink:0;text-decoration:none}
+.nav-logo-icon{width:32px;height:32px;background:linear-gradient(135deg,#1a6cf7,#0f4abf);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nav-logo-icon span{font-family:'Playfair Display',serif;font-weight:700;font-size:13px;color:#fff;line-height:1}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1.2}
+.nav-logo-main{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.08em;color:var(--ink);text-transform:uppercase}
+.nav-logo-sub{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
 .nav-links-wrap{display:flex;align-items:center;flex:1;justify-content:center}
 .nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
 .nav-links a{font-size:13px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.04em;position:relative;transition:color .2s;white-space:nowrap}
 .nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s}
 .nav-links a:hover{color:var(--accent)}
 .nav-links a:hover::after{transform:scaleX(1)}
-
-/* MOBILE MARQUEE NAV */
-.nav-marquee-wrap{display:none;flex:1;overflow:hidden;position:relative;mask-image:linear-gradient(to right,transparent,black 15%,black 85%,transparent)}
+.nav-marquee-wrap{display:none;flex:1;overflow:hidden;mask-image:linear-gradient(to right,transparent,black 15%,black 85%,transparent)}
 .nav-marquee{display:flex;gap:2.5rem;list-style:none;align-items:center;width:max-content;animation:marqueeScroll 12s linear infinite}
-.nav-marquee:hover{animation-play-state:paused}
-.nav-marquee a{font-size:12px;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.04em;white-space:nowrap;transition:color .2s;padding:.2rem 0}
+.nav-marquee a{font-size:12px;color:var(--ink);text-decoration:none;letter-spacing:.04em;white-space:nowrap;transition:color .2s}
 .nav-marquee a:hover{color:var(--accent)}
 @keyframes marqueeScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.nav-right{display:flex;align-items:center;gap:.75rem;flex-shrink:0}
+.nav-hire{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.1rem;border:1px solid var(--ink);color:var(--ink);text-decoration:none;transition:all .2s;white-space:nowrap}
+.nav-hire:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.theme-toggle{background:none;border:1px solid var(--line);cursor:pointer;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all .2s;color:var(--ink);flex-shrink:0}
+.theme-toggle:hover{border-color:var(--accent);color:var(--accent)}
 
 /* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:1.1fr 0.9fr;padding-top:64px}
@@ -51,7 +51,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
 .hero-name{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,4.5vw,5rem);line-height:1.05;font-weight:700;margin-bottom:.3rem;opacity:0;animation:fadeUp .6s .35s forwards}
 .hero-name em{font-style:italic;font-weight:400;color:var(--accent)}
-.hero-role{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2vw,1.6rem);font-style:italic;color:var(--muted);margin-bottom:2rem;opacity:0;animation:fadeUp .6s .5s forwards}
+.hero-role{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2vw,1.6rem);font-style:italic;color:var(--muted);margin-bottom:.5rem;opacity:0;animation:fadeUp .6s .5s forwards}
+.hero-brand{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--skill-gold);margin-bottom:2rem;opacity:0;animation:fadeUp .6s .58s forwards}
 .hero-bio{font-size:14.5px;line-height:1.85;color:var(--muted);max-width:42ch;margin-bottom:2.5rem;opacity:0;animation:fadeUp .6s .65s forwards}
 .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:fadeUp .6s .8s forwards;margin-bottom:3rem}
 .btn{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.8rem 1.75rem;cursor:pointer;text-decoration:none;transition:all .2s;display:inline-block;border:none}
@@ -67,7 +68,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 
 /* HERO PHOTO */
 .hero-right{position:relative;display:flex;align-items:center;justify-content:center;padding:5rem 2.5rem;background:var(--sand);overflow:hidden;transition:background .3s}
-.hero-right::before{content:'AKI';position:absolute;font-family:'Playfair Display',serif;font-size:18rem;font-weight:700;color:rgba(128,128,128,.06);line-height:1;pointer-events:none;user-select:none}
+.hero-right::before{content:'MKO';position:absolute;font-family:'Playfair Display',serif;font-size:14rem;font-weight:700;color:rgba(128,128,128,.05);line-height:1;pointer-events:none;user-select:none}
 .photo-frame{position:relative;opacity:0;animation:fadeIn .8s .6s forwards}
 .photo-frame img{width:290px;height:350px;object-fit:cover;object-position:top center;display:block}
 .photo-frame::before{content:'';position:absolute;top:-14px;left:-14px;right:14px;bottom:14px;border:1px solid var(--line);z-index:0}
@@ -89,17 +90,15 @@ section{border-top:1px solid var(--line)}
 .strength{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border:1px solid var(--line);color:var(--muted);transition:all .2s;cursor:default}
 .strength:hover{border-color:var(--accent);color:var(--accent)}
 
-/* SKILLS - DARK CARD STYLE */
+/* SKILLS DARK CARDS */
 .skills-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:3rem}
 .skill-dark-card{background:var(--skill-bg);border:1px solid var(--skill-border);border-radius:8px;padding:1.5rem 1.25rem;display:flex;flex-direction:column;align-items:flex-start;gap:.75rem;transition:transform .2s,border-color .2s,box-shadow .2s;cursor:default}
-.skill-dark-card:hover{transform:translateY(-4px);border-color:var(--skill-gold);box-shadow:0 8px 32px rgba(0,0,0,.2)}
+.skill-dark-card:hover{transform:translateY(-4px);border-color:var(--skill-gold);box-shadow:0 8px 32px rgba(0,0,0,.25)}
 .skill-dark-icon{width:44px;height:44px;background:rgba(240,180,41,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
-.skill-dark-name{font-family:'DM Sans',sans-serif;font-weight:700;font-size:14px;color:#fff;letter-spacing:.01em}
-.skill-dark-bar{width:100%;height:3px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden;margin-top:.25rem}
-.skill-dark-fill{height:100%;background:linear-gradient(90deg,var(--skill-gold),#f59e0b);border-radius:2px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
-
-/* CURRENTLY LEARNING */
-.learning-strip{margin-top:2.5rem;padding:1.25rem 1.5rem;border:1px solid var(--line);display:flex;align-items:center;gap:1rem;background:var(--sand);transition:background .3s}
+.skill-dark-name{font-family:'DM Sans',sans-serif;font-weight:700;font-size:13px;color:#e8e6e1;letter-spacing:.01em}
+.skill-dark-bar{width:100%;height:3px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden}
+.skill-dark-fill{height:100%;background:linear-gradient(90deg,#f0b429,#f59e0b);border-radius:2px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.learning-strip{margin-top:2rem;padding:1.25rem 1.5rem;border:1px solid var(--line);display:flex;align-items:center;gap:1rem;background:var(--sand);transition:background .3s}
 .learning-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite;flex-shrink:0}
 .learning-text{font-size:13.5px;color:var(--muted)}
 .learning-text strong{color:var(--ink);font-weight:500}
@@ -128,13 +127,29 @@ section{border-top:1px solid var(--line)}
 .exp-bullets li{font-size:13.5px;color:var(--muted);line-height:1.65;padding-left:1.2rem;position:relative;margin-bottom:.45rem}
 .exp-bullets li::before{content:'--';position:absolute;left:0;color:var(--line)}
 
-/* CERTS */
-.certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:3rem}
-.cert-card{padding:1.5rem;border:1px solid var(--line);transition:border-color .2s,background .2s,transform .2s}
-.cert-card:hover{border-color:var(--accent);background:var(--sand);transform:translateY(-3px)}
-.cert-icon{font-size:1.2rem;margin-bottom:.75rem}
-.cert-name{font-family:'Playfair Display',serif;font-weight:700;font-size:14px;margin-bottom:.4rem}
-.cert-issuer{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* CERTS - DARK BLOCKS + LIGHTBOX */
+.certs-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:3rem}
+.cert-dark-card{background:var(--skill-bg);border:1px solid var(--skill-border);border-radius:8px;padding:1.75rem 1.5rem;display:flex;flex-direction:column;align-items:flex-start;gap:.75rem;transition:transform .2s,border-color .2s,box-shadow .2s;cursor:default;position:relative;overflow:hidden}
+.cert-dark-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#f0b429,#1a6cf7);border-radius:8px 8px 0 0}
+.cert-dark-card:hover{transform:translateY(-4px);border-color:var(--skill-gold);box-shadow:0 8px 32px rgba(0,0,0,.25)}
+.cert-dark-icon{width:50px;height:50px;background:rgba(240,180,41,.12);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.6rem}
+.cert-dark-name{font-family:'DM Sans',sans-serif;font-weight:700;font-size:14px;color:#e8e6e1;line-height:1.3}
+.cert-dark-issuer{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#f0b429;margin-top:-.25rem}
+.cert-dark-year{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted)}
+.cert-actions{display:flex;gap:.5rem;margin-top:.25rem;flex-wrap:wrap}
+.cert-btn{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--skill-border);color:#e8e6e1;background:none;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
+.cert-btn:hover{border-color:#f0b429;color:#f0b429}
+.cert-btn.verify{border-color:#1a6cf7;color:#4d8ef7}
+.cert-btn.verify:hover{border-color:#4d8ef7;background:rgba(26,108,247,.1)}
+
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:1000;align-items:center;justify-content:center;padding:2rem}
+.lightbox.open{display:flex}
+.lightbox-inner{position:relative;max-width:900px;width:100%}
+.lightbox-inner img{width:100%;height:auto;display:block;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.lightbox-close{position:absolute;top:-2.5rem;right:0;background:none;border:1px solid rgba(255,255,255,.3);color:#fff;width:36px;height:36px;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.lightbox-close:hover{border-color:#f0b429;color:#f0b429}
+.lightbox-caption{margin-top:1rem;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;color:rgba(255,255,255,.5);text-align:center;text-transform:uppercase}
 
 /* CONTACT */
 .contact-wrap{margin-top:3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem}
@@ -145,9 +160,7 @@ section{border-top:1px solid var(--line)}
 .contact-link:hover{border-color:var(--accent);color:var(--accent);background:var(--sand);padding-left:1.75rem}
 .clabel{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:auto}
 .wa-badge{background:#25d366;color:#fff;font-family:'DM Mono',monospace;font-size:9px;padding:2px 6px;letter-spacing:.05em;border-radius:2px;margin-left:.5rem}
-
-/* CONTACT FORM */
-.contact-form{display:flex;flex-direction:column;gap:.75rem;margin-top:0}
+.contact-form{display:flex;flex-direction:column;gap:.75rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
 .form-group{display:flex;flex-direction:column;gap:.4rem}
 .form-group label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
@@ -160,28 +173,27 @@ section{border-top:1px solid var(--line)}
 
 /* FOOTER */
 footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;justify-content:space-between;align-items:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.06em}
+.footer-brand{display:flex;flex-direction:column;gap:.2rem}
+.footer-brand-name{font-size:12px;font-weight:500;color:var(--ink)}
+.footer-brand-reg{font-size:9px;color:var(--muted);letter-spacing:.08em}
 .footer-links{display:flex;gap:1.5rem}
 .footer-links a{color:var(--muted);text-decoration:none;transition:color .2s}
 .footer-links a:hover{color:var(--accent)}
-
-/* SCROLL TOP */
 .scroll-top{position:fixed;bottom:2rem;right:2rem;width:40px;height:40px;background:var(--ink);color:var(--cream);border:none;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s,background .2s;z-index:50}
 .scroll-top.show{opacity:1}
 .scroll-top:hover{background:var(--accent)}
 
-/* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
-/* MOBILE */
 @media(max-width:768px){
   nav{padding:.9rem 1rem;gap:.5rem}
-  .nav-logo{font-size:10px;flex-shrink:0}
+  .nav-logo-sub{display:none}
   .nav-links-wrap{display:none}
-  .nav-marquee-wrap{display:block}
+  .nav-marquee-wrap{display:block;flex:1}
   .nav-hire{display:none}
   .nav-right{gap:.5rem;flex-shrink:0}
   .hero{grid-template-columns:1fr;min-height:auto}
@@ -195,44 +207,58 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
   .exp-date{padding-top:0}
   .project-item{grid-template-columns:40px 1fr auto;gap:1rem}
   .skills-cards{grid-template-columns:repeat(2,1fr)}
+  .certs-cards{grid-template-columns:repeat(2,1fr)}
   footer{flex-direction:column;gap:1rem;text-align:center}
   .footer-links{justify-content:center}
+  .lightbox{padding:1rem}
 }
 </style>
 </head>
 <body>
 
-<nav>
-  <span class="nav-logo">AKI</span>
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <button class="lightbox-close" onclick="closeLightbox()">&#10005;</button>
+    <img id="lightboxImg" src="" alt="">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+</div>
 
-  <!-- DESKTOP LINKS -->
+<nav>
+  <a href="#about" class="nav-logo-wrap">
+    <div class="nav-logo-icon"><span>MKO</span></div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-main">MKO Global</span>
+      <span class="nav-logo-sub">Business Estate</span>
+    </div>
+  </a>
   <div class="nav-links-wrap">
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#certs">Certs</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
-
-  <!-- MOBILE CONTINUOUS MARQUEE -->
   <div class="nav-marquee-wrap">
-    <ul class="nav-marquee" id="navMarquee">
+    <ul class="nav-marquee">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#certs">Certs</a></li>
       <li><a href="#contact">Contact</a></li>
-      <!-- Duplicated for infinite loop -->
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#certs">Certs</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
-
   <div class="nav-right">
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#9790;</button>
     <a href="mailto:alekolajo@gmail.com" class="nav-hire">Hire Me</a>
@@ -245,6 +271,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
     <p class="hero-tag">Open to opportunities</p>
     <h1 class="hero-name">Ale Kolajo<br><em>Israel</em></h1>
     <p class="hero-role">Front-End Web Developer</p>
+    <p class="hero-brand">&#9670; MKO Global Business Estate</p>
     <p class="hero-bio">A motivated, detail-oriented developer with a B.Eng in Computer Engineering and ALX-certified training. I build responsive, user-centred web apps — clean code, great performance, intuitive UX.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -260,7 +287,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
   <div class="hero-right">
     <div class="photo-frame">
       <img src="ale_photo.jpg" alt="Ale Kolajo Israel — Front-End Developer">
-      <div class="photo-badge">Ale Kolajo Israel<br>Front-End Developer</div>
+      <div class="photo-badge">Ale Kolajo Israel<br>MKO Global Business Estate</div>
     </div>
   </div>
 </section>
@@ -272,7 +299,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
     <h2 class="section-title">Crafting the web,<br>one line at a time</h2>
     <div class="about-grid">
       <div>
-        <p class="about-text">I'm a Front-End Web Developer based in Ado-Ekiti, Nigeria, with a B.Eng in Computer Engineering from Ekiti State University. My journey into tech is backed by the ALX Africa Front-End Web Development Program — one of Africa's most rigorous tech training programmes.</p>
+        <p class="about-text">I'm a Front-End Web Developer and founder of MKO Global Business Estate — a CAC-registered web solutions and digital services company based in Ado-Ekiti, Nigeria. With a B.Eng in Computer Engineering from Ekiti State University and ALX Africa certification, I build responsive, user-centred digital experiences.</p>
         <p class="about-text" style="margin-top:1rem">Beyond code, I'm a proven leader — having organised and coordinated large-scale community programmes, mentored dozens of young people, and led teams across multiple locations.</p>
       </div>
       <div>
@@ -294,61 +321,19 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
   <div class="section-inner reveal">
     <div class="section-label">02 / Technical Skills</div>
     <h2 class="section-title">Tools &amp; technologies<br>I work with</h2>
-
     <div class="skills-cards" id="skillCards">
-      <div class="skill-dark-card">
-        <div class="skill-dark-icon">&#60;/&#62;</div>
-        <div class="skill-dark-name">HTML5</div>
-        <div class="skill-dark-bar"><div class="skill-dark-fill" data-width="95"></div></div>
-      </div>
-      <div class="skill-dark-card">
-        <div class="skill-dark-icon">&#127912;</div>
-        <div class="skill-dark-name">CSS3</div>
-        <div class="skill-dark-bar"><div class="skill-dark-fill" data-width="90"></div></div>
-      </div>
-      <div class="skill-dark-card">
-        <div class="skill-dark-icon">&#9881;</div>
-        <div class="skill-dark-name">JavaScript</div>
-        <div class="skill-dark-bar"><div class="skill-dark-fill" data-width="80"></div></div>
-      </div>
-      <div class="skill-dark-card">
-        <div class="skill-dark-icon">&#9698;</div>
-        <div class="skill-dark-name">React</div>
-        <div class="skill-dark-bar"><div class="skill-dark-fill" data-width="70"></div></div>
-      </div>
-      <div class="skill-dark-card">
-        <div class="skill-dark-icon">&#127774;</div>
-        <div class="skill-dark-name">TailwindCSS</div>
-        <div class="skill-dark-bar"><div class="skill-dark-fill" data-width="75"></div></div>
-      </div>
-      <div class="skill-dark-card">
-        <div class="skill-dark-icon">&#128196;</div>
-        <div class="skill-dark-name">Bootstrap</div>
-        <div class="skill-dark-bar"><div class="skill-dark-fill" data-width="80"></div></div>
-      </div>
-      <div class="skill-dark-card">
-        <div class="skill-dark-icon">&#128268;</div>
-        <div class="skill-dark-name">Git &amp; GitHub</div>
-        <div class="skill-dark-bar"><div class="skill-dark-fill" data-width="85"></div></div>
-      </div>
-      <div class="skill-dark-card">
-        <div class="skill-dark-icon">&#128241;</div>
-        <div class="skill-dark-name">Responsive Design</div>
-        <div class="skill-dark-bar"><div class="skill-dark-fill" data-width="92"></div></div>
-      </div>
-      <div class="skill-dark-card">
-        <div class="skill-dark-icon">&#128279;</div>
-        <div class="skill-dark-name">API Integration</div>
-        <div class="skill-dark-bar"><div class="skill-dark-fill" data-width="75"></div></div>
-      </div>
-      <div class="skill-dark-card">
-        <div class="skill-dark-icon">&#9999;</div>
-        <div class="skill-dark-name">UI/UX Design</div>
-        <div class="skill-dark-bar"><div class="skill-dark-fill" data-width="72"></div></div>
-      </div>
+      <div class="skill-dark-card"><div class="skill-dark-icon">&#60;/&#62;</div><div class="skill-dark-name">HTML5</div><div class="skill-dark-bar"><div class="skill-dark-fill" data-width="95"></div></div></div>
+      <div class="skill-dark-card"><div class="skill-dark-icon">&#127912;</div><div class="skill-dark-name">CSS3</div><div class="skill-dark-bar"><div class="skill-dark-fill" data-width="90"></div></div></div>
+      <div class="skill-dark-card"><div class="skill-dark-icon">&#9881;</div><div class="skill-dark-name">JavaScript</div><div class="skill-dark-bar"><div class="skill-dark-fill" data-width="80"></div></div></div>
+      <div class="skill-dark-card"><div class="skill-dark-icon">&#9698;</div><div class="skill-dark-name">React</div><div class="skill-dark-bar"><div class="skill-dark-fill" data-width="70"></div></div></div>
+      <div class="skill-dark-card"><div class="skill-dark-icon">&#127774;</div><div class="skill-dark-name">TailwindCSS</div><div class="skill-dark-bar"><div class="skill-dark-fill" data-width="75"></div></div></div>
+      <div class="skill-dark-card"><div class="skill-dark-icon">&#128196;</div><div class="skill-dark-name">Bootstrap</div><div class="skill-dark-bar"><div class="skill-dark-fill" data-width="80"></div></div></div>
+      <div class="skill-dark-card"><div class="skill-dark-icon">&#128268;</div><div class="skill-dark-name">Git &amp; GitHub</div><div class="skill-dark-bar"><div class="skill-dark-fill" data-width="85"></div></div></div>
+      <div class="skill-dark-card"><div class="skill-dark-icon">&#128241;</div><div class="skill-dark-name">Responsive Design</div><div class="skill-dark-bar"><div class="skill-dark-fill" data-width="92"></div></div></div>
+      <div class="skill-dark-card"><div class="skill-dark-icon">&#128279;</div><div class="skill-dark-name">API Integration</div><div class="skill-dark-bar"><div class="skill-dark-fill" data-width="75"></div></div></div>
+      <div class="skill-dark-card"><div class="skill-dark-icon">&#9999;</div><div class="skill-dark-name">UI/UX Design</div><div class="skill-dark-bar"><div class="skill-dark-fill" data-width="72"></div></div></div>
     </div>
-
-    <div class="learning-strip" style="margin-top:2rem">
+    <div class="learning-strip">
       <span class="learning-dot"></span>
       <p class="learning-text"><strong>Currently deepening:</strong> React advanced patterns, Node.js &amp; back-end fundamentals</p>
     </div>
@@ -366,7 +351,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
         <span class="project-num">001</span>
         <div>
           <h3 class="project-title">Movie Database App</h3>
-          <p class="project-desc">A responsive movie search platform powered by a third-party API. Features dynamic content rendering and a user-friendly search experience with clean, intuitive UI.</p>
+          <p class="project-desc">A responsive movie search platform powered by a third-party API. Features dynamic content rendering and user-friendly search with clean, intuitive UI.</p>
           <div class="ptags"><span class="ptag">JavaScript</span><span class="ptag">REST API</span><span class="ptag">Responsive</span><span class="ptag">CSS3</span></div>
         </div>
         <span class="project-arrow">&#8599;</span>
@@ -375,7 +360,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
         <span class="project-num">002</span>
         <div>
           <h3 class="project-title">Interactive Quiz Platform</h3>
-          <p class="project-desc">A quiz application with real-time scoring logic and instant feedback. Designed with usability at the forefront — clean layout, smooth interactions, and encouraging UX.</p>
+          <p class="project-desc">A quiz application with real-time scoring logic and instant feedback. Clean layout, smooth interactions, and encouraging UX.</p>
           <div class="ptags"><span class="ptag">JavaScript</span><span class="ptag">DOM</span><span class="ptag">UI/UX</span><span class="ptag">CSS3</span></div>
         </div>
         <span class="project-arrow">&#8599;</span>
@@ -431,31 +416,75 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
 </section>
 
 <!-- CERTIFICATIONS -->
-<section>
+<section id="certs">
   <div class="section-inner reveal">
     <div class="section-label">05 / Certifications</div>
     <h2 class="section-title">Credentials &amp; recognition</h2>
-    <div class="certs-grid">
-      <div class="cert-card">
-        <div class="cert-icon">&#9670;</div>
-        <p class="cert-name">Front-End Web Development</p>
-        <p class="cert-issuer">ALX Africa · 2025</p>
+    <p class="section-sub">Click "View" on any certificate to verify. All certificates are watermarked by MKO Global Business Estate.</p>
+    <div class="certs-cards">
+
+      <div class="cert-dark-card">
+        <div class="cert-dark-icon">&#9881;</div>
+        <div class="cert-dark-name">Front-End Web Development</div>
+        <div class="cert-dark-issuer">ALX Africa</div>
+        <div class="cert-dark-year">Issued: November 2025</div>
+        <div class="cert-actions">
+          <button class="cert-btn" onclick="openLightbox('alx_frontend_cert.jpg','ALX Africa — Front-End Web Development Certificate')">&#128065; View</button>
+          <a class="cert-btn verify" href="https://savanna.alxafrica.com/certificates/fGPFCBe3p5" target="_blank">&#10003; Verify</a>
+        </div>
       </div>
-      <div class="cert-card">
-        <div class="cert-icon">&#9670;</div>
-        <p class="cert-name">Professional Foundations Certificate</p>
-        <p class="cert-issuer">ALX Africa · 2025</p>
+
+      <div class="cert-dark-card">
+        <div class="cert-dark-icon">&#127775;</div>
+        <div class="cert-dark-name">Professional Foundations Certificate</div>
+        <div class="cert-dark-issuer">ALX Africa</div>
+        <div class="cert-dark-year">Issued: June 2025</div>
+        <div class="cert-actions">
+          <button class="cert-btn" onclick="openLightbox('alx_foundations_cert.jpg','ALX Africa — Professional Foundations Certificate')">&#128065; View</button>
+          <a class="cert-btn verify" href="https://savanna.alxafrica.com/certificates/Pn8JELBmGR" target="_blank">&#10003; Verify</a>
+        </div>
       </div>
-      <div class="cert-card">
-        <div class="cert-icon">&#9670;</div>
-        <p class="cert-name">GIZ Programme Certificate</p>
-        <p class="cert-issuer">Deutsche GIZ · 2022</p>
+
+      <div class="cert-dark-card">
+        <div class="cert-dark-icon">&#127981;</div>
+        <div class="cert-dark-name">CAC Business Registration</div>
+        <div class="cert-dark-issuer">Corporate Affairs Commission</div>
+        <div class="cert-dark-year">Reg. No. 9482726 · April 2026</div>
+        <div class="cert-actions">
+          <button class="cert-btn" onclick="openLightbox('cac_registration_cert.jpg','CAC Certificate of Registration — MKO Global Business Estate · Reg. No. 9482726')">&#128065; View</button>
+        </div>
       </div>
-      <div class="cert-card">
-        <div class="cert-icon">&#9670;</div>
-        <p class="cert-name">Community Leadership &amp; Mentorship Certificate</p>
-        <p class="cert-issuer">Community Development Organisation · 2024</p>
+
+      <div class="cert-dark-card">
+        <div class="cert-dark-icon">&#127891;</div>
+        <div class="cert-dark-name">B.Eng — Computer Engineering</div>
+        <div class="cert-dark-issuer">Ekiti State University</div>
+        <div class="cert-dark-year">February 2026</div>
+        <div class="cert-actions">
+          <button class="cert-btn" style="opacity:.4;cursor:not-allowed">&#128065; Coming Soon</button>
+        </div>
       </div>
+
+      <div class="cert-dark-card">
+        <div class="cert-dark-icon">&#127758;</div>
+        <div class="cert-dark-name">GIZ Programme Certificate</div>
+        <div class="cert-dark-issuer">Deutsche GIZ</div>
+        <div class="cert-dark-year">2022</div>
+        <div class="cert-actions">
+          <button class="cert-btn" style="opacity:.4;cursor:not-allowed">&#128065; Coming Soon</button>
+        </div>
+      </div>
+
+      <div class="cert-dark-card">
+        <div class="cert-dark-icon">&#129309;</div>
+        <div class="cert-dark-name">Community Leadership &amp; Mentorship</div>
+        <div class="cert-dark-issuer">Community Development Organisation</div>
+        <div class="cert-dark-year">2024</div>
+        <div class="cert-actions">
+          <button class="cert-btn" style="opacity:.4;cursor:not-allowed">&#128065; Coming Soon</button>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -468,7 +497,7 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
     <div class="contact-wrap">
       <div>
         <p class="contact-intro">"Passionate about building responsive, user-centred applications — always learning, always improving."</p>
-        <p class="contact-note">I'm currently open to front-end developer roles, freelance projects, and collaborations. Feel free to reach out — I typically respond within 24 hours.</p>
+        <p class="contact-note">Open to front-end developer roles, freelance projects, and collaborations. I typically respond within 24 hours.</p>
         <div class="contact-links">
           <a href="mailto:alekolajo@gmail.com" class="contact-link"><span class="clabel">Email</span>alekolajo@gmail.com &#8599;</a>
           <a href="https://wa.me/2348060151823" target="_blank" class="contact-link"><span class="clabel">WhatsApp</span>+234 806 015 1823 <span class="wa-badge">WA</span></a>
@@ -480,6 +509,9 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
       <div>
         <p style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem">Send a message</p>
         <form class="contact-form" id="contactForm">
+          <input type="hidden" name="access_key" value="a783e4d9-32b0-4508-b7d6-0d3c92eb5bdb">
+          <input type="hidden" name="subject" value="New message from Portfolio — MKO Global Business Estate">
+          <input type="hidden" name="from_name" value="Portfolio Contact Form">
           <div class="form-row">
             <div class="form-group">
               <label for="fname">Name</label>
@@ -491,14 +523,10 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
             </div>
           </div>
           <div class="form-group">
-            <label for="fsubject">Subject</label>
-            <input type="text" id="fsubject" name="subject" placeholder="What's this about?">
-          </div>
-          <div class="form-group">
             <label for="fmessage">Message</label>
             <textarea id="fmessage" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="align-self:flex-start" id="submitBtn">Send Message &#8594;</button>
+          <button type="submit" class="btn btn-primary" id="submitBtn">Send Message &#8594;</button>
           <div class="form-status" id="formStatus"></div>
         </form>
       </div>
@@ -507,18 +535,35 @@ footer{border-top:1px solid var(--line);padding:1.75rem 2.5rem;display:flex;just
 </section>
 
 <footer>
-  <span>&#169; 2026 Ale Kolajo Israel</span>
+  <div class="footer-brand">
+    <span class="footer-brand-name">MKO Global Business Estate</span>
+    <span class="footer-brand-reg">CAC Registered · Web Solutions &amp; Digital Services</span>
+    <span style="font-size:10px;color:var(--muted);margin-top:.2rem">&#169; 2026 Ale Kolajo Israel</span>
+  </div>
   <div class="footer-links">
     <a href="https://github.com/MKOale" target="_blank">GitHub</a>
     <a href="https://www.linkedin.com/in/kolajo-ale-353630127" target="_blank">LinkedIn</a>
     <a href="mailto:alekolajo@gmail.com">Email</a>
-    <a href="#about">Back to top &#8593;</a>
+    <a href="#about">Top &#8593;</a>
   </div>
 </footer>
 
-<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">&#8593;</button>
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
 
 <script>
+// LIGHTBOX
+function openLightbox(src, caption){
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightboxCaption').textContent = caption;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); });
+
 // SCROLL REVEAL
 const reveals = document.querySelectorAll('.reveal');
 const obs = new IntersectionObserver(entries => {
@@ -544,7 +589,7 @@ toggle.addEventListener('click', () => {
   toggle.textContent = next === 'dark' ? '\u2600' : '\u263D';
 });
 
-// ANIMATED COUNTERS
+// COUNTERS
 const counters = document.querySelectorAll('.stat-counter');
 const counterObs = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -565,7 +610,7 @@ const counterObs = new IntersectionObserver(entries => {
 }, {threshold: 0.5});
 counters.forEach(c => counterObs.observe(c));
 
-// SKILL BARS ANIMATE
+// SKILL BARS
 const skillObs = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
@@ -579,7 +624,7 @@ const skillObs = new IntersectionObserver(entries => {
 const skillCards = document.getElementById('skillCards');
 if(skillCards) skillObs.observe(skillCards);
 
-// CONTACT FORM — sends to Web3Forms (free, no signup needed)
+// CONTACT FORM - Web3Forms
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
 const submitBtn = document.getElementById('submitBtn');
@@ -588,29 +633,28 @@ if(form){
     e.preventDefault();
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
-    const formData = {
-      access_key: 'YOUR_WEB3FORMS_KEY',
-      name: form.name.value,
-      email: form.email.value,
-      subject: form.subject.value || 'Portfolio Contact',
-      message: form.message.value,
-      redirect: false
-    };
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(formData)
+        headers: {'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify({
+          access_key: 'a783e4d9-32b0-4508-b7d6-0d3c92eb5bdb',
+          name: document.getElementById('fname').value,
+          email: document.getElementById('femail').value,
+          message: document.getElementById('fmessage').value,
+          subject: 'New message from Portfolio — MKO Global Business Estate',
+          from_name: 'Portfolio Contact Form'
+        })
       });
       const data = await res.json();
       if(data.success){
         status.className = 'form-status success';
-        status.textContent = '&#10003; Message sent! I will get back to you within 24 hours.';
+        status.textContent = 'Message sent! I will get back to you within 24 hours.';
         form.reset();
-      } else { throw new Error(); }
-    } catch {
+      } else { throw new Error(data.message); }
+    } catch(err) {
       status.className = 'form-status error';
-      status.textContent = 'Something went wrong. Please email me at alekolajo@gmail.com';
+      status.textContent = 'Could not send. Please email alekolajo@gmail.com directly.';
     }
     submitBtn.textContent = 'Send Message \u2192';
     submitBtn.disabled = false;
